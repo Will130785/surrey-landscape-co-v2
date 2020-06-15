@@ -1,0 +1,19 @@
+/* GENERAL HEADER SECTION STYLING
+Individual styling will apply on each page
+Check relevant page for individual styles */
+
+.header {
+    height: auto;
+    background-image: url("../img/chuttersnap-A7KO30EbxQE-unsplash.jpg");
+    background-size: cover;
+
+    &__logo {
+        
+
+        &--pic {
+
+            height: 20rem;
+            width: 40rem;
+        }
+    }
+}
