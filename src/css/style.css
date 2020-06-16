@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
@@ -12,42 +12,118 @@ body {
   font-family: sans-serif;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8), white), url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
+  background-size: cover;
+}
 .footer__logo--pic {
   height: 10rem;
   width: 20rem;
+}
+.footer__contact h2 {
+  font-size: 2rem;
+}
+.footer__contact p {
+  font-size: 1.6rem;
+}
+.footer__nav li {
+  list-style: none;
+}
+.footer__nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #000;
 }
 
 /* GENERAL HEADER SECTION STYLING
 Individual styling will apply on each page
 Check relevant page for individual styles */
 .header {
-  height: auto;
   background-image: url("../img/chuttersnap-A7KO30EbxQE-unsplash.jpg");
   background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+.header__logo {
+  grid-row: 4/8;
+  grid-column: 8/12;
 }
 .header__logo--pic {
   height: 20rem;
   width: 40rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+}
+.header__main {
+  color: #fff;
+  grid-row: 3/9;
+  grid-column: 2/7;
+}
+.header__main--title {
+  font-size: 7rem;
+}
+.header__main--blurb {
+  margin-top: 3rem;
+}
+.header__main--blurb p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.header__main--blurb ul {
+  line-height: 1.5;
+}
+.header__main--blurb li {
+  font-size: 1.6rem;
+  list-style: none;
+}
+.header__sub {
+  color: #fff;
+  grid-row: 9/10;
+  grid-column: 4/10;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.header__sub p {
+  font-size: 2rem;
 }
 
 .navbar {
   position: fixed;
   width: 100%;
-  height: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  box-shadow: 0 0 2rem 0;
+}
+@media only screen and (max-width: 800px) {
+  .navbar__links {
+    display: none;
+  }
 }
 .navbar__nav {
   display: flex;
+  list-style: none;
+  padding-right: 2rem;
 }
 .navbar__nav--item {
-  margin-right: 1rem;
+  margin-left: 5rem;
+}
+.navbar__nav--link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.8rem;
 }
 .navbar__logo {
   height: 8rem;
   width: 16rem;
+  padding-left: 2rem;
 }
 
 .hamburger {
@@ -59,8 +135,32 @@ Check relevant page for individual styles */
   }
 }
 
-.main {
-  height: 100%;
+main {
+  padding: 0 3rem;
+}
+
+.page-section {
+  margin-top: 15rem;
+}
+
+.main__intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main__image--pic {
+  width: 100%;
+}
+.main__wording {
+  padding: 2rem;
+}
+.main__wording h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.main__wording p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */

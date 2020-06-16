@@ -3,17 +3,67 @@ Individual styling will apply on each page
 Check relevant page for individual styles */
 
 .header {
-    height: auto;
+    // min-height: 80rem;
     background-image: url("../img/chuttersnap-A7KO30EbxQE-unsplash.jpg");
     background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 
     &__logo {
-        
+        grid-row: 4 / 8;
+        grid-column: 8/ 12;
 
         &--pic {
-
             height: 20rem;
             width: 40rem;
+            background-color: #fff;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__main {
+        color: #fff;
+        grid-row: 3 / 9;
+        grid-column: 2 / 7;
+        // background-color: rgba(0, 0, 0, 0.5);
+        // padding: 2rem;
+        // border-radius: .5rem;
+
+        &--title {
+            font-size: 7rem;
+        }
+
+        &--blurb {
+            margin-top: 3rem;
+
+            p {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                line-height: 1.5;
+            }
+
+            li {
+                font-size: 1.6rem;
+                list-style: none;
+            }
+        }
+    }
+
+    &__sub {
+        color: #fff;
+        grid-row: 9 / 10;
+        grid-column: 4 / 10;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .5);
+        padding: 2rem;
+        border-radius: .5rem;
+        
+        p {
+            font-size: 2rem;
         }
     }
 }

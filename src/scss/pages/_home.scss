@@ -1,3 +1,30 @@
 .main {
-    height: 100%;
+    
+    &__intro {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__image {
+
+
+        &--pic {
+            width: 100%;
+        }
+    }
+
+    &__wording {
+        padding: 2rem;
+
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+    }
 }
