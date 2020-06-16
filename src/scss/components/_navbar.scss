@@ -7,10 +7,22 @@
     align-items: center;
     background-color: #fff;
     box-shadow: 0 0 2rem 0;
+    z-index: 100;
+    transition: all .5s;
+
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 10rem;
+        
+        
+    }
     
     &__links {
+        transition: all 1s;
         @media only screen and (max-width: 800px) {
-            display: none;
+        overflow: hidden;
+        opacity: 0;
         }
     }
 
@@ -19,15 +31,24 @@
         list-style: none;
         padding-right: 2rem;
 
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+
         &--item {
             margin-left: 5rem;
+            @media only screen and (max-width: 800px) {
+                padding: 2rem 0;
+            }
         }
 
         &--link {
             text-decoration: none;
             color: #000;
             font-size: 1.8rem;
+
         }
+
     }
 
     &__logo {
@@ -43,5 +64,9 @@
     //Only display hamburger at specified screen width
     @media only screen and (max-width: 800px) {
         display: block;
+        align-self: flex-end;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
     }
 }

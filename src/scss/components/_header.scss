@@ -10,6 +10,13 @@ Check relevant page for individual styles */
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(12, 1fr);
 
+    @media only screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rem;
+    }
+
     &__logo {
         grid-row: 4 / 8;
         grid-column: 8/ 12;
@@ -19,6 +26,11 @@ Check relevant page for individual styles */
             width: 40rem;
             background-color: #fff;
             border-radius: 1.5rem;
+        }
+
+        @media only screen and (max-width: 800px) {
+            grid-row: 1 / 2;
+            grid-column: 2 / 12;
         }
     }
 
@@ -30,12 +42,26 @@ Check relevant page for individual styles */
         // padding: 2rem;
         // border-radius: .5rem;
 
+        @media only screen and (max-width: 800px) {
+            grid-row: 2 / 3;
+            grid-column: 2 / 12;
+        }
+
         &--title {
             font-size: 7rem;
+            line-height: 1.2;
+
+            @media only screen and (max-width: 800px) {
+                text-align: center;
+            }
         }
 
         &--blurb {
             margin-top: 3rem;
+
+            @media only screen and (max-width: 800px) {
+                text-align: center;
+            }
 
             p {
                 font-size: 2rem;
@@ -61,6 +87,11 @@ Check relevant page for individual styles */
         background-color: rgba(0, 0, 0, .5);
         padding: 2rem;
         border-radius: .5rem;
+
+        @media only screen and (max-width: 800px) {
+            grid-row: 3 / 4;
+            grid-column: 2 / 12;
+        }
         
         p {
             font-size: 2rem;

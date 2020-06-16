@@ -68,10 +68,10 @@
         </section>
 
         <!-- Sub wording -->
-        <!-- <section class="header__sub">
+        <section class="header__sub">
             <p>If you have a project that you would like to get started, contact us today to get a free quote!</p>
             <button class="btn">Get Quote</button>
-        </section> -->
+        </section>
     </header>
 
     <!-- Main page content -->
@@ -86,39 +86,43 @@
                 <div class="quote__form--left">
                     <div class="form-group">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" class="form-control" name="fname" placeholder="First Name">
+                        <input type="text" id="fname" class="form-control fname" name="fname">
+
+                        <label for="lname" class="lname-label">Last Name</label>
+                        <input type="text" id="lname" class="form-control lname" name="lname">
                     </div>
-                    <div class="form-group">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" class="form-control" name="lname" placeholder="Last Name">
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group address-group">
                         <label for="hnumber">Hse Num</label>
-                        <input type="text" id="hnumber" class="form-control" name="hnumber" placeholder="House number">
-                    </div>
-                    <div class="form-group">
+                        <input type="text" id="hnumber" class="form-control hnumber" name="hnumber">
+                    
                         <label for="address">Address</label>
-                        <input type="text" id="address" class="form-control" name="address" placeholder="Address">
+                        <input type="text" id="address" class="form-control address" name="address">
                     </div>
                     <div class="form-group">
                         <label for="pcode">Postcode</label>
-                        <input type="text" id="pcode" class="form-control" name="pcode" placeholder="Postcode">
+                        <input type="text" id="pcode" class="form-control pcode" name="pcode">
                     </div>
                     <div class="form-group">
                         <label for="phone">Telephone Number</label>
-                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Telephone Number">
+                        <input type="number" id="phone" class="form-control phone" name="phone">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" id="email" class="form-control email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="length">Length of area to turf</label>
-                        <input type="text" id="length" class="form-control" name="length" placeholder="Length of area to turf">
+                        <input type="text" id="length" class="form-control length" name="length">
                     </div>
                     <div class="form-group">
                         <label for="width">Width of area to turf</label>
-                        <input type="text" id="width" class="form-control" name="width" placeholder="Width of area to turf">
+                        <input type="text" id="width" class="form-control width" name="width">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">Current state of garden</label>
+                        <textarea id="state" class="form-control state" name="state">
+
+                        </textarea>
                     </div>
                 </div>
                 <div class="quote__form--rightt">
@@ -128,31 +132,25 @@
                 </div>
                 <div class="quote__form--rightb">
                     <div class="form-group">
-                        <label for="state">Current state of garden</label>
-                        <textarea id="state" class="form-control" name="state" placeholder="Enter current state of garden">
-
-                        </textarea>
-                    </div>
-                    <div class="form-group">
                         <label for="upload">Upload a picture of your garden</label>
-                        <input type="file" id="upload" class="form-control" name="upload" value="Upload Picture">
+                        <input type="file" id="upload" class="form-control upload" name="upload" value="Upload Picture">
                     </div>
                     <div class="form-group">
                         <label for="works">Description of works to be carried out</label>
-                        <textarea id="works" class="form-control" name="works" placeholder="Enter description of the works that you require">
+                        <textarea id="works" class="form-control works" name="works">
 
                         </textarea>
                     </div>
                     <div class="form-group">
                         <label for="access">How do we access your garden</label>
-                        <input type="text" id="access" class="form-control" name="access" placeholder="Describe garden access">
+                        <input type="text" id="access" class="form-control access" name="access">
                     </div>
                     <div class="form-group">
                         <label for="parking">Parking details</label>
-                        <input type="text" id="parking" class="form-control" name="parking" placeholder="Enter parking details">
+                        <input type="text" id="parking" class="form-control parking" name="parking">
                     </div>
                     <div class="form-group">
-                        <input type="submit" id="submit" class="btn" name="upload" value="Submit">
+                        <input type="submit" id="submit" class="btn submit" name="submit" value="Submit">
                     </div>
                 </div>
             </form>

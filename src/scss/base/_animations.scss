@@ -1,0 +1,8 @@
+@keyframes navLinksDown {
+    0% {
+        translate: scaleY(-10rem);
+    }
+    100% {
+        translate: scaleY(0);
+    }
+}

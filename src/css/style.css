@@ -1,3 +1,11 @@
+@keyframes navLinksDown {
+  0% {
+    translate: scaleY(-10rem);
+  }
+  100% {
+    translate: scaleY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +18,18 @@ html {
 
 body {
   font-family: sans-serif;
+}
+
+.--underline-blue {
+  border-bottom: 0.3rem solid #309EED;
+}
+
+.--underline-green {
+  border-bottom: 0.3rem solid #89E413;
+}
+
+.--underline-brown {
+  border-bottom: 0.3rem solid #9E6B00;
 }
 
 .footer {
@@ -48,6 +68,14 @@ Check relevant page for individual styles */
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(12, 1fr);
 }
+@media only screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem;
+  }
+}
 .header__logo {
   grid-row: 4/8;
   grid-column: 8/12;
@@ -58,16 +86,39 @@ Check relevant page for individual styles */
   background-color: #fff;
   border-radius: 1.5rem;
 }
+@media only screen and (max-width: 800px) {
+  .header__logo {
+    grid-row: 1/2;
+    grid-column: 2/12;
+  }
+}
 .header__main {
   color: #fff;
   grid-row: 3/9;
   grid-column: 2/7;
 }
+@media only screen and (max-width: 800px) {
+  .header__main {
+    grid-row: 2/3;
+    grid-column: 2/12;
+  }
+}
 .header__main--title {
   font-size: 7rem;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 800px) {
+  .header__main--title {
+    text-align: center;
+  }
 }
 .header__main--blurb {
   margin-top: 3rem;
+}
+@media only screen and (max-width: 800px) {
+  .header__main--blurb {
+    text-align: center;
+  }
 }
 .header__main--blurb p {
   font-size: 2rem;
@@ -89,6 +140,12 @@ Check relevant page for individual styles */
   padding: 2rem;
   border-radius: 0.5rem;
 }
+@media only screen and (max-width: 800px) {
+  .header__sub {
+    grid-row: 3/4;
+    grid-column: 2/12;
+  }
+}
 .header__sub p {
   font-size: 2rem;
 }
@@ -101,10 +158,23 @@ Check relevant page for individual styles */
   align-items: center;
   background-color: #fff;
   box-shadow: 0 0 2rem 0;
+  z-index: 100;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 10rem;
+  }
+}
+.navbar__links {
+  transition: all 1s;
 }
 @media only screen and (max-width: 800px) {
   .navbar__links {
-    display: none;
+    overflow: hidden;
+    opacity: 0;
   }
 }
 .navbar__nav {
@@ -112,8 +182,18 @@ Check relevant page for individual styles */
   list-style: none;
   padding-right: 2rem;
 }
+@media only screen and (max-width: 800px) {
+  .navbar__nav {
+    flex-direction: column;
+  }
+}
 .navbar__nav--item {
   margin-left: 5rem;
+}
+@media only screen and (max-width: 800px) {
+  .navbar__nav--item {
+    padding: 2rem 0;
+  }
 }
 .navbar__nav--link {
   text-decoration: none;
@@ -132,6 +212,10 @@ Check relevant page for individual styles */
 @media only screen and (max-width: 800px) {
   .hamburger {
     display: block;
+    align-self: flex-end;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   }
 }
 
@@ -143,15 +227,55 @@ main {
   margin-top: 15rem;
 }
 
+.about__intro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 800px) {
+  .about__image {
+    grid-column: 1/3;
+  }
+}
+.about__image--pic {
+  width: 100%;
+}
+.about__wording {
+  padding: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .about__wording {
+    grid-column: 1/3;
+  }
+}
+.about__wording h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.about__wording p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
 .main__intro {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 800px) {
+  .main__image {
+    grid-column: 1/3;
+  }
 }
 .main__image--pic {
   width: 100%;
 }
 .main__wording {
   padding: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .main__wording {
+    grid-column: 1/3;
+  }
 }
 .main__wording h2 {
   font-size: 4rem;
@@ -161,6 +285,180 @@ main {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 300;
+}
+
+.quote__form {
+  background-image: url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
+  background-size: cover;
+}
+.quote__form--content {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 5rem;
+}
+.quote__form--left {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+@media only screen and (max-width: 800px) {
+  .quote__form--left {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+.quote__form--rightt {
+  grid-column: 2/3;
+  margin-bottom: 5rem;
+  color: red;
+}
+@media only screen and (max-width: 800px) {
+  .quote__form--rightt {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    text-align: center;
+  }
+}
+.quote__form--rightt h3 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.quote__form--rightt p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.quote__form--rightb {
+  grid-column: 2/3;
+}
+@media only screen and (max-width: 800px) {
+  .quote__form--rightb {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+}
+
+.form-control {
+  padding: 1rem;
+  width: 75%;
+  background-color: #f4f6f9;
+  border: none;
+  border-bottom: 0.2rem solid #448700;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+label {
+  position: absolute;
+  top: -1.5rem;
+  font-size: 1.4rem;
+}
+
+.fname {
+  width: 35%;
+  margin-right: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .fname {
+    width: 45%;
+  }
+}
+
+.lname {
+  width: 35%;
+}
+@media only screen and (max-width: 800px) {
+  .lname {
+    width: 45%;
+  }
+}
+
+.hnumber {
+  width: 20%;
+  margin-right: 0.5rem;
+}
+
+.address {
+  width: 50%;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 2.8rem;
+}
+
+.submit {
+  cursor: pointer;
+  display: block;
+  width: 75%;
+  padding: 1rem;
+  border: none;
+  background-color: #86C9FA;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 800px) {
+  .submit {
+    width: 100%;
+  }
+}
+
+.submit:hover {
+  background-color: #309EED;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.services__turfing, .services__decking, .services__fencing, .services__patios, .services__wooden {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 800px) {
+  .services__turfing--img-container, .services__decking--img-container, .services__fencing--img-container, .services__patios--img-container, .services__wooden--img-container {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+}
+.services__turfing--pic, .services__decking--pic, .services__fencing--pic, .services__patios--pic, .services__wooden--pic {
+  width: 100%;
+}
+.services__turfing--wording, .services__decking--wording, .services__fencing--wording, .services__patios--wording, .services__wooden--wording {
+  padding: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .services__turfing--wording, .services__decking--wording, .services__fencing--wording, .services__patios--wording, .services__wooden--wording {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+.services__turfing--wording h2, .services__decking--wording h2, .services__fencing--wording h2, .services__patios--wording h2, .services__wooden--wording h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.services__turfing--wording p, .services__decking--wording p, .services__fencing--wording p, .services__patios--wording p, .services__wooden--wording p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.services__turfing--wording h3, .services__decking--wording h3, .services__fencing--wording h3, .services__patios--wording h3, .services__wooden--wording h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+.services__turfing--wording ul, .services__decking--wording ul, .services__fencing--wording ul, .services__patios--wording ul, .services__wooden--wording ul {
+  margin-bottom: 3rem;
+}
+.services__turfing--wording li, .services__decking--wording li, .services__fencing--wording li, .services__patios--wording li, .services__wooden--wording li {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

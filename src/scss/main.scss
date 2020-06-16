@@ -1,4 +1,8 @@
+@import "abstracts/variables";
+
+@import "base/animations";
 @import "base/base";
+@import "base/utilities";
 
 @import "components/footer";
 @import "components/header";
@@ -6,4 +10,7 @@
 
 @import "layout/page-sections";
 
+@import "pages/about";
 @import "pages/home";
+@import "pages/quote";
+@import "pages/services";
