@@ -159,7 +159,6 @@ Check relevant page for individual styles */
   background-color: #fff;
   box-shadow: 0 0 2rem 0;
   z-index: 100;
-  transition: all 0.5s;
 }
 @media only screen and (max-width: 800px) {
   .navbar {
@@ -168,13 +167,10 @@ Check relevant page for individual styles */
     height: 10rem;
   }
 }
-.navbar__links {
-  transition: all 1s;
-}
 @media only screen and (max-width: 800px) {
   .navbar__links {
-    overflow: hidden;
     opacity: 0;
+    overflow: hidden;
   }
 }
 .navbar__nav {
@@ -185,6 +181,10 @@ Check relevant page for individual styles */
 @media only screen and (max-width: 800px) {
   .navbar__nav {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: center;
   }
 }
 .navbar__nav--item {
@@ -192,13 +192,19 @@ Check relevant page for individual styles */
 }
 @media only screen and (max-width: 800px) {
   .navbar__nav--item {
-    padding: 2rem 0;
+    padding: 5rem 0;
+    margin: 0;
   }
 }
 .navbar__nav--link {
   text-decoration: none;
   color: #000;
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 800px) {
+  .navbar__nav--link {
+    font-size: 3rem;
+  }
 }
 .navbar__logo {
   height: 8rem;
