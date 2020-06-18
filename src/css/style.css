@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sriracha&display=swap");
 @keyframes navLinksDown {
   0% {
     translate: scaleY(-10rem);
@@ -42,7 +43,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .--underline-blue {
@@ -50,11 +51,35 @@ body {
 }
 
 .--underline-green {
-  border-bottom: 0.3rem solid #89E413;
+  border-bottom: 0.3rem solid #a3d31d;
 }
 
 .--underline-brown {
   border-bottom: 0.3rem solid #9E6B00;
+}
+
+.--highlight-brown {
+  color: #9E6B00;
+}
+
+.--highlight-blue {
+  color: #309EED;
+}
+
+.--highlight-green {
+  color: #a3d31d;
+}
+
+.banner {
+  background-color: #0072C7;
+  opacity: 0.8;
+  margin-top: 15rem;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+.banner p {
+  font-size: 4rem;
+  color: #ffffff;
 }
 
 .btn {
@@ -72,12 +97,18 @@ body {
   background-color: #9E6B00;
 }
 
+.btn-banner {
+  margin-top: 2rem;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8), white), url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
   background-size: cover;
+  margin-top: 15rem;
+  padding: 3rem;
 }
 .footer__logo--pic {
   height: 10rem;
@@ -88,14 +119,6 @@ body {
 }
 .footer__contact p {
   font-size: 1.6rem;
-}
-.footer__nav li {
-  list-style: none;
-}
-.footer__nav a {
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #000;
 }
 
 /* GENERAL HEADER SECTION STYLING
@@ -123,7 +146,7 @@ Check relevant page for individual styles */
 .header__logo--pic {
   height: 20rem;
   width: 40rem;
-  background-color: #fff;
+  background-color: white;
   border-radius: 1.5rem;
 }
 @media only screen and (max-width: 800px) {
@@ -187,12 +210,12 @@ Check relevant page for individual styles */
   background-color: #fff;
   box-shadow: 0 0 2rem 0;
   z-index: 100;
+  height: 13rem;
 }
 @media only screen and (max-width: 900px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    height: 10rem;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -226,17 +249,21 @@ Check relevant page for individual styles */
 }
 .navbar__nav--link {
   text-decoration: none;
-  color: #000;
+  color: #9E6B00;
   font-size: 1.8rem;
+  transition: all 0.3s;
 }
 @media only screen and (max-width: 900px) {
   .navbar__nav--link {
     font-size: 3rem;
   }
 }
+.navbar__nav--link:hover {
+  color: #a3d31d;
+}
 .navbar__logo {
-  height: 8rem;
-  width: 16rem;
+  height: 12rem;
+  width: 24rem;
   padding-left: 2rem;
 }
 
@@ -253,17 +280,18 @@ Check relevant page for individual styles */
   }
 }
 
-main {
-  padding: 0 3rem;
-}
-
 .page-section {
-  margin-top: 15rem;
+  margin: 20rem 3rem 0 3rem;
 }
 
 .about__intro {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 800px) {
+  .about__intro {
+    grid-row-gap: 10rem;
+  }
 }
 @media only screen and (max-width: 800px) {
   .about__image {
@@ -324,6 +352,11 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media only screen and (max-width: 800px) {
+  .main__web {
+    grid-row-gap: 10rem;
+  }
+}
 .main__web--images {
   position: relative;
 }
@@ -333,26 +366,84 @@ main {
     grid-row: 2/3;
   }
 }
+.main__web--wording {
+  padding: 5rem 8rem;
+}
 @media only screen and (max-width: 800px) {
   .main__web--wording {
     grid-column: 1/3;
     grid-row: 1/2;
   }
 }
+.main__web--wording p {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  font-weight: 300;
+}
 .main__web--desk {
   width: 100%;
 }
 .main__web--mob {
   position: absolute;
-  width: 25%;
+  right: -5rem;
+  top: 5rem;
+  width: 40%;
+}
+@media only screen and (max-width: 800px) {
+  .main__web--mob {
+    right: 0;
+    top: 0;
+  }
+}
+.main__web--social-container {
+  display: flex;
+  justify-content: center;
+}
+.main__web--social {
+  margin: 0 3rem;
+}
+.main__web--icon {
+  height: 5rem;
+  width: 5rem;
+}
+.main__test h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 3rem;
+  color: #9E6B00;
+}
+.main__test--cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 800px) {
+  .main__test--cards {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10rem;
+  }
+}
+.main__test--item {
+  background-color: #f6f9ff;
+  padding: 2rem;
+  border-radius: 1rem;
+  border-left: 2px solid #a3d31d;
+  border-bottom: 2px solid #a3d31d;
+}
+.main__test--item p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+.main__test--item h4 {
+  font-size: 1.6rem;
 }
 
 .quote__form {
-  background-image: url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
-  background-size: cover;
+  padding: 5rem;
 }
 .quote__form--content {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #f6f9ff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -424,7 +515,7 @@ label {
 }
 @media only screen and (max-width: 800px) {
   .fname {
-    width: 45%;
+    width: 40%;
   }
 }
 
@@ -433,7 +524,7 @@ label {
 }
 @media only screen and (max-width: 800px) {
   .lname {
-    width: 45%;
+    width: 40%;
   }
 }
 
@@ -483,6 +574,11 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
 }
 @media only screen and (max-width: 800px) {
+  .services__turfing, .services__decking, .services__fencing, .services__patios, .services__wooden {
+    grid-row-gap: 10rem;
+  }
+}
+@media only screen and (max-width: 800px) {
   .services__turfing--img-container, .services__decking--img-container, .services__fencing--img-container, .services__patios--img-container, .services__wooden--img-container {
     grid-column: 1/3;
     grid-row: 2/3;
@@ -490,6 +586,7 @@ textarea {
 }
 .services__turfing--pic, .services__decking--pic, .services__fencing--pic, .services__patios--pic, .services__wooden--pic {
   width: 100%;
+  height: 100%;
 }
 .services__turfing--wording, .services__decking--wording, .services__fencing--wording, .services__patios--wording, .services__wooden--wording {
   padding: 2rem;

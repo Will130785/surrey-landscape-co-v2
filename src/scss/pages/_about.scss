@@ -3,6 +3,10 @@
     &__intro {
        display: grid;
        grid-template-columns: repeat(2, 1fr);
+
+       @media only screen and (max-width: 800px) {
+        grid-row-gap: 10rem;
+    }
     }
 
     &__image {

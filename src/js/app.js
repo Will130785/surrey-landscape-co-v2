@@ -17,7 +17,7 @@ hamburgerBtn.addEventListener("click", e => {
         linkItem.style.width = "100vw";
         linkStatus = 1;
     } else if(linkStatus === 1) {
-        navbar.style.height = "10rem";
+        navbar.style.height = "13rem";
         links.style.opacity = "0";
         linkItem.style.height = "auto";
         linkItem.style.width = "auto";
@@ -30,7 +30,7 @@ hamburgerBtn.addEventListener("click", e => {
 window.addEventListener("resize", e => {
     if(window.innerWidth > 900) {
         links.style.opacity = "1";
-        navbar.style.height = "10rem";
+        navbar.style.height = "13rem";
         links.style.overflow = "hidden";
         hamburgerBtn.classList.remove("active");
         linkItem.style.height = "auto";

@@ -2,11 +2,12 @@
 
 
     &__form {
-        background-image: url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
-        background-size: cover;
+        // background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1)), url("../img/alex-brisbey-WalgQ0AHdFM-unsplash.jpg");
+        // background-size: cover;
+        padding: 5rem;
 
         &--content {
-            background-color: rgba(255, 255, 255, .9);
+            background-color: rgb(246, 249, 255);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             align-items: center;
@@ -81,7 +82,7 @@ label {
     margin-right: .5rem;
 
     @media only screen and (max-width: 800px) {
-        width: 45%;
+        width: 40%;
     }
 }
 
@@ -89,7 +90,7 @@ label {
     width: 35%;
 
     @media only screen and (max-width: 800px) {
-        width: 45%;
+        width: 40%;
     }
 }
 
