@@ -1,0 +1,14 @@
+.btn {
+    padding: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 2rem;
+    background-color: $color-brown-dark;
+    color: #fff;
+    transition: all .3s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: $color-brown;
+}

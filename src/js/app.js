@@ -28,7 +28,7 @@ hamburgerBtn.addEventListener("click", e => {
 });
 
 window.addEventListener("resize", e => {
-    if(window.innerWidth > 800) {
+    if(window.innerWidth > 900) {
         links.style.opacity = "1";
         navbar.style.height = "10rem";
         links.style.overflow = "hidden";
