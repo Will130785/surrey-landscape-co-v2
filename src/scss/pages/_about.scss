@@ -4,13 +4,13 @@
        display: grid;
        grid-template-columns: repeat(2, 1fr);
 
-       @media only screen and (max-width: 800px) {
+       @media only screen and (max-width: 900px) {
         grid-row-gap: 10rem;
     }
     }
 
     &__image {
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 900px) {
             grid-column: 1 / 3;
         }
 
@@ -22,7 +22,7 @@
     &__wording {
         padding: 2rem;
 
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 900px) {
             grid-column: 1 / 3;
         }
 
@@ -35,6 +35,10 @@
             font-size: 2rem;
             margin-bottom: 2rem;
             font-weight: 300;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 3rem;
+            }
         }
     }
 }

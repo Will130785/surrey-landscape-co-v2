@@ -11,12 +11,24 @@ html {
     font-size: 62.5%; //1rem = 10px
 
     //Base font size changes for different screen sizes
+    @media only screen and (min-width: 2000px) {
+        font-size: 80%;
+    }
+
+    @media only screen and (min-width: 1600px) {
+        font-size: 70%;
+    }
+
     @media only screen and (max-width: 1200px) {
         font-size: 60%;
     }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1000px) {
         font-size: 55%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        font-size: 53%;
     }
 
     @media only screen and (max-width: 700px) {
@@ -29,6 +41,14 @@ html {
 
     @media only screen and (max-width: 400px) {
         font-size: 40%;
+    }
+
+    @media only screen and (max-width: 300px) {
+        font-size: 35%;
+    }
+
+    @media only screen and (max-width: 250px) {
+        font-size: 30%;
     }
 }
 
